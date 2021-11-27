@@ -28,9 +28,9 @@ def plot_results(all_days):
     averaged = moving_average(averaged, window_size=window_size)
 
     plt.plot(x[:-2 * (window_size - 1)], averaged, color='green', linewidth=4)
-    plt.tight_layout()
     plt.title('Number of yellow taxi rides in New York per day')
     plt.suptitle(' ')
+    plt.tight_layout()
     plt.savefig('output.png')
     plt.show()
 
